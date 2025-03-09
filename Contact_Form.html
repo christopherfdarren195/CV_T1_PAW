@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <link rel="shortcut icon" href="Icon_Logo.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form | CV Christopher Ferdinand Darren Manalu</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #f2f3f4, #ecf0f1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 400px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+        }
+        label {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        input, select, textarea {
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            transition: 0.3s;
+            font-size: 14px;
+        }
+        input:focus, select:focus, textarea:focus {
+            border-color: #4facfe;
+            box-shadow: 0px 0px 5px rgba(79, 172, 254, 0.5);
+            outline: none;
+        }
+        .form-group.gender-group {
+            align-items: start;
+        }
+        .gender-options {
+            display: flex;
+            gap: 130px;
+            align-items: center;
+        }
+        .gender-options input {
+            margin-right: 5px;
+        }
+        textarea {
+            resize: none;
+        }
+        button {
+            background: linear-gradient(to right, #ccd1d1, #d5dbdb);
+            color: black;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: linear-gradient(to right, #d5dbdb, #ccd1d1);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Contact Form</h2>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama" name="nama" required>
+            </div>
+
+            <div class="form-group">
+                <label for="nohp">No HP/WA:</label>
+                <input type="text" id="nohp" name="nohp" required>
+            </div>
+
+            <div class="form-group gender-group">
+                <label>Jenis Kelamin:</label>
+                <div class="gender-options">
+                    <label><input type="radio" name="gender" value="Laki-Laki" required> Laki-Laki</label>
+                    <label><input type="radio" name="gender" value="Perempuan" required> Perempuan</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="pendidikan">Pendidikan:</label>
+                <select id="pendidikan" name="pendidikan">
+                    <option value="SD">SD</option>
+                    <option value="SMP">SMP</option>
+                    <option value="SMA">SMA</option>
+                    <option value="S1">S1</option>
+                    <option value="S2">S2</option>
+                    <option value="S3">S3</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="keperluan">Keperluan:</label>
+                <textarea id="keperluan" name="keperluan" rows="3"></textarea>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
